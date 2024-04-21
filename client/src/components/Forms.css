@@ -1,0 +1,8 @@
+table {
+    border-collapse: separate;
+    border-spacing: 6px; 
+}
+
+th, td {
+    padding: 1px; 
+}

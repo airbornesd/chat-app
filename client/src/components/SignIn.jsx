@@ -1,8 +1,8 @@
 import './Forms.css';
 
-export default function Login() {
+export default function SignIn() {
   return (
-    <form action="">
+    <form action="" className="">
       <table>
         <thead>
           <th></th>
@@ -11,10 +11,18 @@ export default function Login() {
         <tbody>
           <tr>
             <td>
+              <label htmlFor="email">email</label>
+            </td>
+            <td>
+              <input type="text" id="email" className="text-zinc-900" />
+            </td>
+          </tr>
+          <tr>
+            <td>
               <label htmlFor="username"> username </label>
             </td>
             <td>
-              <input type="text" id="username" className="text-zinc-900	" />
+              <input type="text" id="username" className="text-zinc-900" />
             </td>
           </tr>
           <tr>
@@ -28,7 +36,7 @@ export default function Login() {
         </tbody>
       </table>
       <button className="mt-3 w-full border border-white">submit</button>
-      <button className="mt-3 w-full border border-white">sign in</button>
+      <button className="mt-3 w-full border border-white">log in</button>
     </form>
   );
 }
