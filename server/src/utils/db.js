@@ -1,15 +1,16 @@
 import mongoose from 'mongoose';
 
 const uri = process.env.MONGO_URI;
+const name = process.env.MONGO_DB_NAME;
 
 const connectMongoDb = async () => {
   try {
     await mongoose.connect(uri, {
-      dbName: process.env.MONGO_DB_NAME,
+      dbName: name,
     });
     console.log('db connected');
   } catch (e) {
-    console.error('db connection error: ', e.message);
+    console.error('db connection error: ', e);
     process.exit();
   }
 };
